@@ -19,25 +19,66 @@
         <span class="navbar-brand mx-auto mb-2 h-3">Weather Dashboard</span>
     </nav>
     <p1>Search for a city:</p1>
-    <nav class="navbar navbar-dark xsm-dark">
-        <form class="form-inline">
-            <input class="form-control mr-sm-2" type="fetchButton" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="fetchButton">Search</button>
-        </form>
-    </nav>
-    <div class="card" style="width: 70rem;">
+    <!--click button to find weather in a city-->
+    <form class="form-inline">
+        <input class="form-control mr-sm-2" type="fetchButton" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="fetchButton">Search</button>
+    </form>
+
+    <div id="JumboCard" class="card" style="width: rem;">
         <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <h6 class="card-subtitle mb-5 text-muted">Card subtitle</h6>
-            <p><a href="#" class="card-link text-muted">Card link</a></p>
-            <p><a href="#" class="card-link text-muted">Another link</a></p>
-            <p><a href="#" class="card-link text-muted">Card link</a></p>
-            <p><a href="#" class="card-link text-muted">Another link</a></p>
+            <h5 class="card-title">Weather Forcast</h5>
+            <h6 class="card-subtitle mb-5 text-muted">Checking the weather one city at a time.</h6>
+            <p><a id="chosenCity" href="#" class="card-link text-muted">City:</a></p>
+            <p><a id="temperature" href="#" class="card-link text-muted">Temperature:</a></p>
+            <p><a id="humidity" href="#" class="card-link text-muted">Humidity:</a></p>
+            <p><a id="windSpeed" href="#" class="card-link text-muted">Wind Speed:</a></p>
+            <p><a id="uvIndex" href="#" class="card-link text-muted">UV Index:</a></p>
+        </div>
+    </div>
+    <h2>Five Day Forcast</h2>
+    <div class="card-deck">
+        <div class="card">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Weather</h5>
+                <p class="card-text">This is a longer card with </p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Weather</h5>
+                <p class="card-text">This card has supporting.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Weather</h5>
+                <p class="card-text">This is a wider card </p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Weather</h5>
+                <p class="card-text">This card has supporting.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Weather</h5>
+                <p class="card-text">This is a wider card</p>
+            </div>
         </div>
     </div>
 
+
+
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
-    <script src="index.js"></script>
+    <script src="index.html"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>

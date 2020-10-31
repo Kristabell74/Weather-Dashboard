@@ -7,6 +7,18 @@ h1 {
 text-align: center;
 
 }
-card {
+form {
+    margin-bottom: 10px;
+}
+.jumboCard {
     float: right;
+    margin-bottom: 10px;
+
+}
+.card-deck{
+    border-width: 2px;
+}
+
+.card{
+    border-width: 2px;
 }
