@@ -62,16 +62,26 @@
 
 // });
 
-function getApi() {
+function getApi2() {
     // fetch request gets a list of all the repos for the node.js organization
     var latitude = lat.value;
-    var longitude = lon.value
-    var requestUrl = 'https://api.openweathermap.org/data/2.5/uvi?lat={lat}&{lon}={lon}&appid=${apiKey}'
+    var longitude = lon.value;
+    var apiKey2 = "3c94a2bf570fbad6331f56c6025b394d"
+    var requestUrl = 'https://api.openweathermap.org/data/2.5/uvi?lat={lat}&{lon}={lon}&appid=${apiKey2}'
     //fetching the response from the api
     console.log("testing")
     fetch(requestUrl)
-        .then(function (response) { 
+        .then(function (response) {
             return response.json();
         })
         .then(function (data) {
             console.log(data)
+
+            // var tempText = data.list[0].main.temp;
+            // document.getElementById("temperature").innerHTML = "Temperature: " + tempText;
+        }
+
+
+
+        )
+}
