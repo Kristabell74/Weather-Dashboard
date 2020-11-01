@@ -13,12 +13,24 @@ form {
 .jumboCard {
     float: right;
     margin-bottom: 10px;
+    border-width: 3px;
+    border-color: blue;
 
 }
 .card-deck{
     border-width: 2px;
+    margin-top: 30px;
+    float: right;
 }
 
 .card{
-    border-width: 2px;
+    border-width: 3px;
+    float: right;
+}
+
+.cityStorage {
+    max-height: 30px;
+    max-width: 30px;
+    margin-top: 10px;
+
 }
