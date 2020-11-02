@@ -1,6 +1,23 @@
+p1{
+    margin-left: 60px;
+    margin-top: 30px;
+    font-size: 35px;
+    font-weight: bold;
+}
+h5{
+    font-size: 35px;
+    font-weight: bold;
+}
+p2{
+    font-size: 25px;
+    font-weight: bold;
+
+}
+
 form {
+    margin-top: 30px;
     margin-bottom: 10px;
-    margin-left: 40px;
+    margin-left: 60px;
 }
 .container {
     height: 400px;
@@ -9,7 +26,7 @@ form {
     margin-bottom: 10px;
     border-style: solid;
     border-width: 3px;
-    border-color: blue;
+    border-color: rgb(3, 31, 2);
     margin-right: 90px;
 
 }
@@ -22,14 +39,14 @@ form {
 
 .card0,.card1,.card2,.card3,.card4{
     border-style: solid;
-    border-width: 2px;
+    border-width: 3px;
     float: right;
     box-sizing: content-box;
     height: 200px;
     width: 200px;
     margin-right: 30px;
     margin-top: 30px;
-    
+    border-color: rgb(3, 31, 2);
 }
 
 container2{
@@ -40,7 +57,7 @@ container2{
     float: right;
   } 
   
-}
+
 
 .cityStorage {
     max-height: 30px;
