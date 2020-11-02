@@ -14,11 +14,16 @@ p2{
 
 }
 
-form {
-    margin-top: 30px;
-    margin-bottom: 10px;
-    margin-left: 60px;
+body  {
+    background-color: rgb(226, 226, 245);
 }
+
+form {
+    margin-top: px;
+    margin-bottom: 10px;
+    margin-left: 40px;
+}
+
 .container {
     height: 400px;
     width: 600;
@@ -28,6 +33,7 @@ form {
     border-width: 3px;
     border-color: rgb(3, 31, 2);
     margin-right: 90px;
+    background-color: rgb(184, 184, 216);
 
 }
 .card-deck{
@@ -47,6 +53,8 @@ form {
     margin-right: 30px;
     margin-top: 30px;
     border-color: rgb(3, 31, 2);
+    background-color:rgb(140, 140, 194);
+    font-size: 20px;
 }
 
 container2{

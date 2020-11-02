@@ -6,7 +6,7 @@ var userCitySpan = document.querySelector('#city');
 var citiesWeather = document.querySelector('.weather');
 
 function getApi() {
-    // fetch request gets a list of all the repos for the node.js organization
+    //fetch request gets a list of all the repos for the node.js organization
     var city = cityInput.value;
     var apiKey = "3c94a2bf570fbad6331f56c6025b394d"
     var requestUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=imperial&appid=${apiKey}`
@@ -30,11 +30,10 @@ function getApi() {
 
             var windText = data.list[0].wind.speed;
             document.getElementById("wind").innerHTML = "Wind Speed: " + windText;
-            //Box Information FOR TEMPERATURE
+            //Box Information FOR temperature
 
             var dayFourText = data.list[0].main.temp;
-            var dayFourDate =
-                document.getElementById("dayFour").innerHTML = "Five Day Forcast Fahrenheit Temperature: " + dayFourText;
+            document.getElementById("dayFour").innerHTML = "Five Day Forcast Fahrenheit Temperature: " + dayFourText;
 
             var dayThreeText = data.list[1].main.temp;
             document.getElementById("dayThree").innerHTML = "Five Day Forcast Fahrenheit Temperature: " + dayThreeText;
@@ -69,7 +68,7 @@ function getApi() {
 }
 
 
-//Displays the city weather
+//Displays the city Weather
 function displayMessage(type, message) {
     msgDiv.textContent = message;
     msgDiv.setAttribute("class", type);
@@ -82,24 +81,41 @@ searchBtn.addEventListener("click", function (event) {
 
 });
 
-// function getTheApi() {
-//     // fetch request gets a list of all the repos for the node.js organization
-//     var latInput = lat={lat}.value;
-//     var lonInput = lon={lon}.value;
-//     var apiKey2 = "3c94a2bf570fbad6331f56c6025b394d"
-//     var requestUrl = 'https://api.openweathermap.org/data/2.5/uvi?lat={lat}&lon={lon}&appid=${apiKey2}'
-//     //fetching the response from the api
-//     console.log("testing")
-//     fetch(requestUrl)
-//         .then(function (response) {
-//             return response.json();
-//         })
-//         .then(function (data) {
-//             console.log(data)
 
-//             // var tempText = data.list[0].main.temp;
-//             // document.getElementById("temperature").innerHTML = "Temperature: " + tempText;
-//         });
+//This API is for the weather Address
+function getApi() {
+    var lat = response.city.coord.lat;
+    var lon = response.city.coord.lon;
+    var apiKeyTwo = "3c94a2bf570fbad6331f56c6025b394d"
+    var requestUrl = 'https://api.openweathermap.org/data/2.5/uvi?lat=${lat}&lon=${lon}&appid=${apiKeyTwo}'
+    //fetching the response from the api
+    console.log("testing")
+    fetch(requestUrl)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            console.log(data)
 
-// }
+            //var
+
+            for (var i = 0; i < data.length; i++) {
+                // Creating elements, tablerow, tabledata, and anchor
+                var createTableRow = document.createElement('tr');
+                var tableData = document.createElement('td');
+                var link = document.createElement('a');
+
+                // Setting the text of link and the href of the link
+                link.textContent = data[i].html_url;
+                link.href = data[i].html_url;
+
+                // Appending the link to the tabledata and then appending the tabledata to the tablerow
+                // The tablerow then gets appended to the tablebody
+                tableData.appendChild(link);
+                createTableRow.appendChild(tableData);
+                tableBody.appendChild(createTableRow);
+            }
+        });
+
+}
 
