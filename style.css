@@ -9,13 +9,22 @@ h5{
     font-weight: bold;
 }
 p2{
-    font-size: 25px;
+    font-size: 35px;
+    font-weight: bold;
+}
+p5{
     font-weight: bold;
 
 }
 
 body  {
+    background-image: url(/Assets/IMG_Ice2.jpeg);
     background-color: rgb(226, 226, 245);
+}
+
+.searchBtn{
+background-color: black;
+
 }
 
 form {
@@ -33,7 +42,8 @@ form {
     border-width: 3px;
     border-color: rgb(3, 31, 2);
     margin-right: 90px;
-    background-color: rgb(184, 184, 216);
+    background-color: rgb(130, 139, 226);
+   font-size: 20px;
 
 }
 .card-deck{
@@ -53,7 +63,7 @@ form {
     margin-right: 35px;
     margin-top: 30px;
     border-color: rgb(3, 31, 2);
-    background-color:rgb(140, 140, 194);
+    background-color:rgb(111, 122, 219);
     font-size: 20px;
 }
   
