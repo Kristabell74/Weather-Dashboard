@@ -10,6 +10,7 @@ function getApi() {
     var city = cityInput.value;
     var apiKey = "3c94a2bf570fbad6331f56c6025b394d"
     var requestUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=imperial&appid=${apiKey}`
+    // var requestUrl = 'https://api.openweathermap.org/data/2.5/uvi?lat=${lat}&lon=${lon}&appid=${apiKeyTwo}'
     //fetching the response from the api
     console.log("testing")
     fetch(requestUrl)
