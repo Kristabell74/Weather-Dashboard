@@ -1,6 +1,55 @@
+function getApi() {
+    var lat = response.city.coord.lat;
+    var lon = response.city.coord.lon;
+
+    var apiKey = "3c94a2bf570fbad6331f56c6025b394d"
+    var requestUrl = `https://api.openweathermap.org/data/2.5/uvi?lat=${lat}&lon=${lon}&appid=${apiKey}`
+    //fetch response from API
+    console.log("testing")
+    fetch(requestUrl)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            console.log(data)
+
+            var uvIndexText = data.city.name;
+            document.getElementById("UV Index").innerHTML = "UV Index" + uvIndexText;
+
+            for (var i = 0; i < data.length; i++) {
+                // Creating elements, tablerow, tabledata, and anchor
+                var createTableRow = document.createElement('tr');
+                var tableData = document.createElement('td');
+                var link = document.createElement('a');
+
+                // Setting the text of link and the href of the link
+                link.textContent = data[i].html_url;
+                link.href = data[i].html_url;
+
+                // Appending the link to the tabledata and then appending the tabledata to the tablerow
+                // The tablerow then gets appended to the tablebody
+                tableData.appendChild(link);
+                createTableRow.appendChild(tableData);
+                tableBody.appendChild(createTableRow);
+            }
+        }
+
+};
 
 
 
+// var requestUrl = `https://api.openweathermap.org/data/2.5/uvi?lat=${lat}&lon=${lon}&appid=${apiKey}`
+// var lat = response.city.coord.lat;
+    // var lon = response.city.coord.lat;
+
+    // import RecentSearches from 'recent-searches'
+
+// const searches = new RecentSearches({
+//   ttl: number, // Optional: ttl of searches in milliseconds, default to 24h (1000 * 60 * 60 * 24)
+//   limit: number, // Optional: max number of entries that will be persisted, default is 50
+//   namespace: string, // Optional: custom localStorage namespace
+//   ranking: string // Optional: ranking strategy of recent searches, "PROXIMITY" | "TIME" | "PROXIMITY_AND_TIME", default is "PROXIMITY_AND_TIME"
+// })
 
 // var dayFourDate = data.list[4].dt_txt;
 // document.getElementById("fourDate").innerHTML = "Date: " + dayFourDate;
@@ -51,3 +100,15 @@
 
 // var dayZeroWind = data.list[0].wind.speed;;
 // document.getElementById("zeroWind").innerHTML = "Wind Speed: " + dayZeroWind;
+
+
+// var cityText = data.city.name;
+//             document.getElementById("city").innerHTML = "City: " + cityText;
+
+
+             // var theCity = data.city.name;{
+    // document.getElementById("city") + theCity;
+    //   localStorage.getItem('city');
+
+    //   (console.log('city'))
+    // }

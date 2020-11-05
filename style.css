@@ -18,7 +18,7 @@ p5{
 }
 
 body  {
-    background-image: url(/Assets/IMG_Ice2.jpeg);
+    background-image:url(/Assets/IMG_Ice2.jpeg);
     background-color: rgb(226, 226, 245);
 }
 
@@ -28,9 +28,18 @@ background-color: black;
 }
 
 form {
-    margin-top: px;
+    margin-top:10 px;
     margin-bottom: 10px;
     margin-left: 70px;
+
+}
+
+
+.container5{
+    border-style: solid;
+    background-color: burlywood;
+    height:250px;
+    width:250px;
 }
 
 .container {
@@ -42,7 +51,7 @@ form {
     border-width: 3px;
     border-color: rgb(3, 31, 2);
     margin-right: 90px;
-    background-color: rgb(130, 139, 226);
+    background-image:url(/Assets/IMG_0813.jpeg);
    font-size: 20px;
 
 }
@@ -63,8 +72,8 @@ form {
     margin-right: 35px;
     margin-top: 30px;
     border-color: rgb(3, 31, 2);
-    background-color:rgb(111, 122, 219);
     font-size: 20px;
+    background-image:url(/Assets/IMG_0813.jpeg);
 }
   
 container2{
@@ -76,10 +85,4 @@ container2{
   } 
   
 
-.cityStorage {
-    max-height: 30px;
-    max-width: 30px;
-    margin-top: 40px;
-
-}
 

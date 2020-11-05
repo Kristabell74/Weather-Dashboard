@@ -10,7 +10,6 @@ function getApi() {
     var city = cityInput.value;
     var apiKey = "3c94a2bf570fbad6331f56c6025b394d"
     var requestUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=imperial&appid=${apiKey}`
-    // var requestUrl = `https://api.openweathermap.org/data/2.5/uvi?lat=${lat}&lon=${lon}&appid=${apiKey}`
     // fetching the response from the api
     console.log("testing")
     fetch(requestUrl)
@@ -36,54 +35,54 @@ function getApi() {
             document.getElementById("wind").innerHTML = "Wind Speed: " + windText;
 
             //day Four Text Box
-            var dayFourText = data.list[4].main.temp;
+            var dayFourText = data.list[34].main.temp;
             document.getElementById("fourTemperature").innerHTML = "Temperature: " + dayFourText;
 
-            var dayFourHumidity = data.list[4].main.humidity;
+            var dayFourHumidity = data.list[34].main.humidity;
             document.getElementById("fourHumidity").innerHTML = "Humidity: " + dayFourHumidity;
 
-            var dayFourWind = data.list[4].wind.speed;
+            var dayFourWind = data.list[34].wind.speed;
             document.getElementById("fourWind").innerHTML = "Wind Speed: " + dayFourWind;
 
 
             //Day Three Text Box
-            var dayThreeText = data.list[3].main.temp;
+            var dayThreeText = data.list[26].main.temp;
             document.getElementById("threeTemperature").innerHTML = "Temperature: " + dayThreeText;
 
-            var dayThreeHumidity = data.list[3].main.humidity;
+            var dayThreeHumidity = data.list[26].main.humidity;
             document.getElementById("threeHumidity").innerHTML = "Humidity: " + dayThreeHumidity;
 
-            var dayThreeWind = data.list[3].wind.speed;
+            var dayThreeWind = data.list[26].wind.speed;
             document.getElementById("threeWind").innerHTML = "Wind Speed: " + dayThreeWind;
 
             //Day Two Text Box
-            var dayTwoText = data.list[2].main.temp;
+            var dayTwoText = data.list[18].main.temp;
             document.getElementById("twoTemperature").innerHTML = "Temperature: " + dayTwoText;
 
-            var dayTwoHumidity = data.list[2].main.humidity;
+            var dayTwoHumidity = data.list[18].main.humidity;
             document.getElementById("twoHumidity").innerHTML = "Humidity: " + dayTwoHumidity;
 
-            var dayTwoWind = data.list[2].wind.speed;
+            var dayTwoWind = data.list[18].wind.speed;
             document.getElementById("twoWind").innerHTML = "Wind Speed: " + dayTwoWind;
 
             //Day One Text Box
-            var dayOneText = data.list[1].main.temp;
+            var dayOneText = data.list[10].main.temp;
             document.getElementById("oneTemperature").innerHTML = "Temperature: " + dayOneText;
 
-            var dayOneHumidity = data.list[1].main.humidity;
+            var dayOneHumidity = data.list[10].main.humidity;
             document.getElementById("oneHumidity").innerHTML = "Humidity: " + dayOneHumidity;
 
-            var dayOneWind = data.list[1].wind.speed;
+            var dayOneWind = data.list[10].wind.speed;
             document.getElementById("oneWind").innerHTML = "Wind Speed: " + dayOneWind;
 
             //Day Zero Text Box
-            var dayZeroText = data.list[0].main.temp;
+            var dayZeroText = data.list[2].main.temp;
             document.getElementById("zeroTemperature").innerHTML = "Temperature: " + dayZeroText;
 
-            var dayZeroHumidity = data.list[0].main.humidity;
+            var dayZeroHumidity = data.list[2].main.humidity;
             document.getElementById("zeroHumidity").innerHTML = "Humidity: " + dayZeroHumidity;
 
-            var dayZeroWind = data.list[0].wind.speed;
+            var dayZeroWind = data.list[2].wind.speed;
             document.getElementById("zeroWind").innerHTML = "Wind Speed: " + dayZeroWind;
 
 
@@ -120,4 +119,7 @@ searchBtn.addEventListener("click", function (event) {
 
 
 });
+
+
+
 
