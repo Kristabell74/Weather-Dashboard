@@ -1,41 +1,44 @@
-function getApi() {
-    var lat = response.city.coord.lat;
-    var lon = response.city.coord.lon;
+// var searchBtn = document.querySelector("#searchWeather");
+// var userCitySpan = document.querySelector('#city');
+// var citiesWeather = document.querySelector('.weather');
 
-    var apiKey = "3c94a2bf570fbad6331f56c6025b394d"
-    var requestUrl = `https://api.openweathermap.org/data/2.5/uvi?lat=${lat}&lon=${lon}&appid=${apiKey}`
-    //fetch response from API
-    console.log("testing")
-    fetch(requestUrl)
-        .then(function (response) {
-            return response.json();
-        })
-        .then(function (data) {
-            console.log(data)
+// Promise.all({
+//     var apiKey = "3c94a2bf570fbad6331f56c6025b394d"
+//   fetch= `https://api.openweathermap.org/data/2.5/uvi?lat=${lat}&lon=${lon}&appid=${apiKey}`
+//   fetch = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=imperial&appid=${apiKey}`
+//     //fetch response from API
+//     fetch(requestUrl)
+//         .then(function (responses) {
+//             return Promise.all(reponses.map(function(response) {
+//                 return response.json();
+//         }));
+//     .then(function (data) {
+//             console.log(data)
 
-            var uvIndexText = data.city.name;
-            document.getElementById("UV Index").innerHTML = "UV Index" + uvIndexText;
 
-            for (var i = 0; i < data.length; i++) {
-                // Creating elements, tablerow, tabledata, and anchor
-                var createTableRow = document.createElement('tr');
-                var tableData = document.createElement('td');
-                var link = document.createElement('a');
 
-                // Setting the text of link and the href of the link
-                link.textContent = data[i].html_url;
-                link.href = data[i].html_url;
+//             var uvIndexText = data.city.name;
+//             document.getElementById("UV Index").innerHTML = "UV Index" + uvIndexText;
 
-                // Appending the link to the tabledata and then appending the tabledata to the tablerow
-                // The tablerow then gets appended to the tablebody
-                tableData.appendChild(link);
-                createTableRow.appendChild(tableData);
-                tableBody.appendChild(createTableRow);
-            }
-        }
+//             for (var i = 0; i < data.length; i++) {
+//                 // Creating elements, tablerow, tabledata, and anchor
+//                 var createTableRow = document.createElement('tr');
+//                 var tableData = document.createElement('td');
+//                 var link = document.createElement('a');
 
-};
+//                 // Setting the text of link and the href of the link
+//                 link.textContent = data[i].html_url;
+//                 link.href = data[i].html_url;
 
+//                 // Appending the link to the tabledata and then appending the tabledata to the tablerow
+//                 // The tablerow then gets appended to the tablebody
+//                 tableData.appendChild(link);
+//                 createTableRow.appendChild(tableData);
+//                 tableBody.appendChild(createTableRow);
+//             }
+//         }
+
+// };
 
 
 // var requestUrl = `https://api.openweathermap.org/data/2.5/uvi?lat=${lat}&lon=${lon}&appid=${apiKey}`
