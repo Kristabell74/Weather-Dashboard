@@ -8,11 +8,9 @@ var citiesWeather = document.querySelector('.weather');
 function getApi() {
     //fetch request gets a list of all the repos for the node.js organization
     var city = cityInput.value;
-    var lat = getResponse.requestUrl(".data.city.coord.lat.value");
-    var lon = getResponse.requestUrl(".data.city.coord.lat.value");
     var apiKey = "3c94a2bf570fbad6331f56c6025b394d"
     var requestUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=imperial&appid=${apiKey}`
-    var uvRequestUrl = `https://api.openweathermap.org/data/2.5/uvi?lat=${lat}&lon=${lon}&appid=${apiKey}`
+
     // fetching the response from the api
     console.log("testing")
     fetch(requestUrl)
@@ -20,13 +18,21 @@ function getApi() {
             return response.json();
         })
         .then(function (data) {
-            console.log(data)
 
             var cityText = data.city.name;
             document.getElementById("city").innerHTML = "City: " + cityText;
 
             var dateText = data.list[0].dt_txt;
             document.getElementById("date").innerHTML = "Date: " + dateText;
+
+            var latText = data.city.coord.lat;
+            document.getElementById("lat").innerHTML = "Latitude: " + latText;
+
+            var lonText = data.city.coord.lon;
+            document.getElementById("lon").innerHTML = "Longitude: " + lonText;
+
+            var uvRequestUrl = `https://api.openweathermap.org/data/2.5/uvi?lat=${latText}&lon=${lonText}&appid=${apiKey}`
+            console.log(uvRequestUrl)
 
             var tempText = data.list[0].main.temp;
             document.getElementById("temperature").innerHTML = "Fahrenheit Temperature: " + tempText;
@@ -144,11 +150,11 @@ function getApi() {
 
             //pulling tha longitute and latitude from the city data 
 
-            var uvIndexLat = data.city.coord.lat;
-            document.getElementById("lat").city = { lat } + uvIndexLat;
+            // var uvIndexLat = data.city.coord.lat;
+            // document.getElementById("lat").city = { lat } + uvIndexLat;
 
-            var uvIndexLon = data.city.coord.lon;
-            document.getElementById("lon").city = { lon } + uvIndexLon;
+            // var uvIndexLon = data.city.coord.lon;
+            // document.getElementById("lon").city = { lon } + uvIndexLon;
 
             //Loop over the data to generate a table, each table row will have a link to the repo url
 
@@ -169,7 +175,11 @@ function getApi() {
                 createTableRow.appendChild(tableData);
                 tableBody.appendChild(createTableRow);
             }
-        });
+        })
+        .catch(function (error){
+            console.log(error)
+        }
+            )
 }
 
 

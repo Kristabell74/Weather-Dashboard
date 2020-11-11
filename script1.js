@@ -115,3 +115,19 @@
 
     //   (console.log('city'))
     // }
+
+
+
+    var latText = data.city.coord.lat.value;
+    document.getElementById("lat").innerHTML = "Latitude: " + latText;
+
+    var lonText = data.city.coord.lon.value;
+    document.getElementByID("lon").innerHTML = "Longitude: " + lonText;
+
+
+//does the same thing as the console log on 179
+    // function catch (callback) {
+//     if (response.error) {
+//         callback()
+    // }
+// }

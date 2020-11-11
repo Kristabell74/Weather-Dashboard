@@ -1,15 +1,15 @@
 p1{
-    margin-left: 70px;
+    margin-left: 75px;
     margin-top: 30px;
-    font-size: 35px;
+    font-size: 30px;
     font-weight: bold;
 }
 h5{
-    font-size: 35px;
+    font-size: 30px;
     font-weight: bold;
 }
 p2{
-    font-size: 35px;
+    font-size: 30px;
     font-weight: bold;
 }
 p5{
@@ -20,6 +20,7 @@ p5{
 body  {
     background-image:url(/Assets/IMG_cloudy.jpeg);
     background-color: rgb(226, 226, 245);
+  
 }
 
 .searchBtn{
@@ -34,7 +35,6 @@ form {
 
 }
 
-
 .container5{
     border-style: solid;
     background-color: burlywood;
@@ -43,7 +43,7 @@ form {
 }
 
 .container {
-    height: 400px;
+    height: 475px;
     width: 500;
     float: right;
     margin-bottom: 10px;
@@ -84,5 +84,10 @@ container2{
     float: right;
   } 
   
+  footer{
+      max-height: 150px;
+      margin-top: 325px;
+      background-image:url(/Assets/IMG_0813.jpeg);
+  }
 
 

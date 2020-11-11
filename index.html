@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-dark bg-dark">
+    <nav id=navBar class="navbar navbar-dark bg-dark">
         <span class="navbar-brand mx-auto mb-2 h-3">Weather Dashboard</span>
     </nav>
     <p1>Search For A City:</p1>
@@ -34,6 +34,8 @@
             <h6 class="card-subtitle mb-5 text-dark-bold">Checking the weather one city at a time.</h6>
             <p2 id="city" class="card-link text-dark">City: </p2>
             <p id="date" class="card-link text-dark">Date: </p>
+            <p id="lat" class="card-link text-dark">Latitude: </p>
+            <p id="lon" class="card-link text-dark">Longitude: </p>
             <p id="temperature" class="card-link text-dark">Temperature:(F) </p>
             <p id="humidity" class="card-link text-dark">Humidity: </p>
             <p id="wind" class="card-link text-dark">Wind Speed: </p>
@@ -81,7 +83,13 @@
             <p id="zeroIcon">Icon:</p>
         </div>
         </div>
+        <div>
+        </div>
+        <footer>
+            @ Copyright Weather Dashboard 2020
+        </footer>
     </container2>
+
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="script.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
