@@ -140,7 +140,8 @@ function getApi() {
                 tableBody.appendChild(createTableRow);
             }
         });
-
+      //Function getting API
+    // function getAPI(){}
     fetch(uvRequestUrl)
         .then(function (response) {
             return response.json();
@@ -148,15 +149,7 @@ function getApi() {
         .then(function (data) {
             console.log(data)
 
-            //pulling tha longitute and latitude from the city data 
-
-            // var uvIndexLat = data.city.coord.lat;
-            // document.getElementById("lat").city = { lat } + uvIndexLat;
-
-            // var uvIndexLon = data.city.coord.lon;
-            // document.getElementById("lon").city = { lon } + uvIndexLon;
-
-            //Loop over the data to generate a table, each table row will have a link to the repo url
+           //Loop over the data to generate a table, each table row will have a link to the repo url
 
             for (var i = 0; i < data.length; i++) {
                 // Appending the link to the tabledata and then appending the tabledata to the tablerow
@@ -174,6 +167,8 @@ function getApi() {
                 tableData.appendChild(link);
                 createTableRow.appendChild(tableData);
                 tableBody.appendChild(createTableRow);
+           
+           
             }
         })
         .catch(function (error){
