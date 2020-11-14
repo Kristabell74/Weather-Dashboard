@@ -31,8 +31,9 @@ function getApi() {
             var lonText = data.city.coord.lon;
             document.getElementById("lon").innerHTML = "Longitude: " + lonText;
 
-            var uvRequestUrl = `https://api.openweathermap.org/data/2.5/uvi?lat=${latText}&lon=${lonText}&appid=${apiKey}`
-            console.log(uvRequestUrl)
+
+            // var uvRequestUrl = `https://api.openweathermap.org/data/2.5/uvi?lat=${latText}&lon=${lonText}&appid=${apiKey}`
+            // console.log(uvRequestUrl)
 
             var tempText = data.list[0].main.temp;
             document.getElementById("temperature").innerHTML = "Fahrenheit Temperature: " + tempText;
@@ -43,8 +44,8 @@ function getApi() {
             var windText = data.list[0].wind.speed;
             document.getElementById("wind").innerHTML = "Wind Speed: " + windText;
 
-            // var uvIndexText = data.;
-            // document.getElementById("w").innerHTML = "UV Index: " + uvIndexText;
+            // var uvIndexText = `https://api.openweathermap.org/data/2.5/uvi?lat=${latText}&lon=${lonText}&appid=${apiKey}`;
+            // document.getElementById("uvi").innerHTML = "UV Index: " + uvIndexText;
 
 
             //day Four Text Box
@@ -140,7 +141,7 @@ function getApi() {
                 tableBody.appendChild(createTableRow);
             }
         });
-      //Function getting API
+    //Function getting API
     // function getAPI(){}
     fetch(uvRequestUrl)
         .then(function (response) {
@@ -149,7 +150,7 @@ function getApi() {
         .then(function (data) {
             console.log(data)
 
-           //Loop over the data to generate a table, each table row will have a link to the repo url
+            //Loop over the data to generate a table, each table row will have a link to the repo url
 
             for (var i = 0; i < data.length; i++) {
                 // Appending the link to the tabledata and then appending the tabledata to the tablerow
@@ -167,14 +168,14 @@ function getApi() {
                 tableData.appendChild(link);
                 createTableRow.appendChild(tableData);
                 tableBody.appendChild(createTableRow);
-           
-           
+
+
             }
         })
-        .catch(function (error){
+        .catch(function (error) {
             console.log(error)
         }
-            )
+        )
 }
 
 
