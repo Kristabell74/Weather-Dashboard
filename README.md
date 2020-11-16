@@ -1,20 +1,26 @@
 # Weather-Dashboard
-Kristabell Johnson
+####Kristabell Johnson
 
-Why Built:
+##### Why Built:
 I built this dashboard to tall the weather in any city that is typed into the search bar.
 
-Installation:
+##### Installation:
 A repository was created in Github. As I worked I would push the information into Github.
 Then I worked on the project and sent it up to git hub.
 
-Usage:
+##### Usage:
 First the user goes into the file and search a city of your choosing.
 Then the user will get the results of the weather in the city they typed.
 The user will also be able to check out the 5 day forecast.
 
+##### Images:
+1. Picture of the search bar website when it typed into search.
+![Search Bar Search](/Screenshots/city1.png)
+2. Picture of a city that has been searched and the results.
+![Picture including Nav bar](/Screenshots/city2.png)
 
-Credit:
+
+##### Credit:
 Michelle Brito- Tutor
 iarcones- Learning assistant from Slack
 Jeff-Teachers Assistant
@@ -29,3 +35,5 @@ https://stackoverflow.com/questions/46310387/bootstraps-jumbotron-cant-see-the-b
 https://stackoverflow.com/questions/62285288/openweather-api-uv-index
 https://github.com/JonasBa/recent-searches#usage
 https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage
+
+
