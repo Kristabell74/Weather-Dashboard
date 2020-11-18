@@ -18,7 +18,7 @@ p5{
 }
 
 body  {
-    background-image:url(/Assets/IMG_cloudy.jpeg);
+    background-image: url("../Assets/IMG_cloudy.jpeg");
   
   
 }
@@ -52,7 +52,7 @@ form {
     border-color: rgb(3, 31, 2);
     margin-right: 90px;
     /* background-image:url(/Assets/IMG_0949.jpeg); */
-    background-image:url(/Assets/IMG_1161.jpeg);
+    background-image: url("../Assets/IMG_1161.jpeg");
    font-size: 20px;
 
 }
@@ -74,7 +74,7 @@ form {
     margin-top: 30px;
     border-color: rgb(3, 31, 2);
     font-size: 20px;
-    background-image:url(/Assets/IMG_1161.jpeg);
+    background-image:url("../Assets/IMG_1161.jpeg");
 }
   
 container2{
