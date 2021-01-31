@@ -2,7 +2,7 @@
 ####Kristabell Johnson
 
 ##### Why Built:
-I built this dashboard to tall the weather in any city that is typed into the search bar.
+I built this dashboard to tell the weather in any city that is typed into the search bar.
 
 ##### Installation:
 A repository was created in Github. As I worked I would push the information into Github.
